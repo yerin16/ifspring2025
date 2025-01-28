@@ -1,0 +1,39 @@
+body {
+    background-color: rgb(31, 31, 31);
+    margin: 0;
+    font-family: Optima, sans-serif;
+}
+
+header {
+    text-align: center;
+    background-color: black;
+    color: white;
+    padding: 10px 0;
+}
+
+article {
+    background-color: rgb(21, 21, 21);
+    padding: 30px;
+    margin: 50px;
+    border-radius: 15px;
+    border: 5px solid #cbcbcb;
+    transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+}
+
+article:hover {
+    transform: translateY(-5px);
+    box-shadow: 5px 5px 10px rgb(153, 153, 153);
+}
+
+article h3 {
+    font-size: 1.5em;
+    color: white;
+}
+
+p {
+    color: white;
+}
+
+p em {
+    color: rgb(141, 141, 255);
+}
