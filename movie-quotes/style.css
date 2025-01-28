@@ -11,6 +11,11 @@ header {
     padding: 10px 0;
 }
 
+header h1 {
+    font-size: 3em;
+    margin-bottom: 0;
+}
+
 article {
     background-color: rgb(21, 21, 21);
     padding: 30px;
