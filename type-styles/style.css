@@ -1,0 +1,77 @@
+body {
+    font-family: "Open Sans", serif;
+    font-size: 24px;
+}
+
+/* header */
+header, section {
+    margin-bottom: 90px;
+}
+
+h1 {
+    font-size: 2.8rem;
+    margin-bottom: 10px;
+}
+
+header p {
+    margin: 0;
+}
+
+/* main */
+h2 {
+    font-size: 2rem;
+    color: #bbb;
+    margin-bottom: .4em;
+}
+
+h3 {
+    font-size: 1rem;
+    margin-bottom: .2em;
+    font-weight: 400;
+    color: #999;
+}
+
+main p {
+    margin-top: 0;
+}
+
+/* applying styles */
+.bold {
+    font-weight: bold;
+}
+
+.italic {
+    font-style: italic;
+}
+
+.wide {
+    letter-spacing: .3em;
+}
+
+.narrow {
+    letter-spacing: -.06em;
+}
+
+.underline {
+    text-decoration: underline;
+}
+
+.line-through {
+    text-decoration: line-through;
+}
+
+.overline {
+    text-decoration: overline;
+}
+
+.uppercase {
+    text-transform: uppercase;
+}
+
+.lowercase {
+    text-transform: lowercase;
+}
+
+.captialize {
+    text-transform: capitalize;
+}
