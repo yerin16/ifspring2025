@@ -7,7 +7,7 @@ p {
 }
 
 .see-all {
-    font-size: .8em;
+    font-size: 0.8em;
     text-transform: uppercase;
 }
 
@@ -32,7 +32,7 @@ h1 {
     width: 25%;
 }
 
-.shows > li {
+.shows>li {
     border-top: 1px solid black;
 }
 
@@ -42,7 +42,7 @@ nav .selected a {
 }
 
 .cast a div {
-    font-size: .8rem;
+    font-size: 0.8rem;
 }
 
 .cast a div:first-of-type {
@@ -54,11 +54,11 @@ nav .selected a {
 }
 
 #game-of-thrones .seasons li:last-of-type::after {
-    content: '*';
+    content: "*";
 }
 
 #game-of-thrones .seasons::after {
-    content: '* Final Season';
+    content: "* Final Season";
     font-size: 0.7rem;
     color: #999;
 }
