@@ -1,0 +1,261 @@
+/* General */
+html {
+    scroll-behavior: smooth;
+}
+
+* {
+    margin: 0;
+    box-sizing: border-box;
+    font-family: Apple Chancery, cursive;
+}
+
+body {
+    background-color: var(--light-color);
+}
+
+h1, h2, h3, h4, h5, h6 {
+    margin: 0;
+}
+
+ol {
+    padding-left: 0;
+}
+
+/* variables */
+:root {
+    --primary-color: #3a5a40;
+    --secondary-color: #a3b18a;
+    --dark-color: #344e41;
+    --light-color: #dad7cd;
+}
+
+/* scrolling */
+section, div {
+    scroll-margin-top: 58px;
+}
+
+/* Header */
+.nav-container {
+    position: fixed;
+    width: 100%;
+    background-color: var(--primary-color);
+    padding: 10px 50px;
+    z-index: 1000;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    color: white;
+}
+
+.logo i {
+    font-size: 2rem;
+}
+
+.logo h1 {
+    font-size: 1.5rem;
+}
+
+.nav-options {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 25px;
+}
+
+.nav-options a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.2rem;
+}
+
+.nav-options a:hover {
+    color: var(--dark-color);
+}
+
+/* main */
+main {
+    padding-top: 58px;
+}
+
+/* About */
+.about-container {
+    text-align: center;
+    padding: 30px 150px;
+    background-color: var(--light-color);
+}
+
+.about-container header {
+    padding: 30px 0;
+    color: var(--primary-color);
+}
+
+.about {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    line-height: 2;
+    gap: 60px;
+    margin: 20px 0;
+    text-align: justify;
+}
+
+.about h1 {
+    color: var(--dark-color);
+    font-size: 3rem;
+}
+
+.about img {
+    height: 300px;
+    width: 400px;
+    object-fit: cover;
+    object-position: 50% 60%;
+}
+
+table {
+    width: 100%;
+    table-layout : fixed;
+}
+
+th {
+    background-color: var(--primary-color);
+    color: white;
+    padding: 0.4rem;
+    text-align: center;
+}
+
+td {
+    background-color: white;
+    padding: 0.4rem;
+    text-align: center;
+}
+
+/* Prep */
+.prep-container {
+    background-color: var(--dark-color);
+    display: flex;
+    justify-content: space-around;
+    padding: 30px 150px;
+}
+
+.prep-container h2 {
+    color: var(--light-color);
+    font-size: 2rem;
+    margin-bottom: 10px;
+}
+
+.prep-container label {
+    color: white;
+    font-size: 1.2rem;
+}
+
+/* instruction */
+.instruction-container {
+    background-color: var(--light-color);
+    padding: 30px 150px;
+}
+
+.instruction-container header {
+    color: var(--dark-color);
+    text-align: center;
+    font-size: 1.5rem;
+    margin-bottom: 30px;
+}
+
+.instruction-container ol {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    /* list-style-type: none; */
+    counter-reset: step-counter;
+}
+
+.instruction-container ol li {
+    counter-increment: step-counter;
+    display: flex;
+    flex-direction: column; /* Stack text on top, image below */
+    justify-content: space-between;
+    gap: 10px;
+}
+
+.instruction-container img {
+    width: 100%;
+    object-fit: cover;
+}
+
+.instruction-container .step {
+    background-color: var(--dark-color);
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    color: white;
+    text-align: center;
+    line-height: 20px;
+    margin-right: 5px;
+}
+
+/* footer */
+footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 30px 50px;
+    background-color: var(--dark-color);
+    color: var(--light-color);
+}
+
+footer a {
+    color: var(--light-color);
+}
+
+footer a:visited {
+    color: var(--secondary-color);
+}
+
+/* media queries */
+@media screen and (max-width: 1024px) {
+    nav {
+        flex-direction: column;
+    }
+    
+    .about-container {
+        padding: 30px 50px;
+    }
+    .about {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .prep-container {
+        flex-direction: column;
+        gap: 30px;
+        align-items: center;
+    }
+
+    .prep-container h2 {
+        text-align: center;
+    }
+
+    .prep-container form {
+        text-align: center;
+    }
+
+    .instruction-container {
+        padding: 30px 50px;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .instruction-container ol {
+        grid-template-columns: 1fr;
+    }
+}
