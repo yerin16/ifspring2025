@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weirdness - Microsite Initial Build</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Bootstrap icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Irish+Grover&family=Underdog&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- header -->
+    <header class="nav-container">
+        <nav>
+            <div class="logo">
+                <a href="index.html#home"><img src="images/logo.png" alt="Logo"></a>
+            </div>
+            <div class="nav-options">
+                <a href="history.html">History</a>
+                <a href="weirdness.html" class="active">Weirdness</a>
+                <a href="controversies.html">Controversies</a>
+                <a href="sources.html">Sources</a>
+            </div>
+        </nav>
+    </header>
+
+    <!-- main -->
+    <main>
+        <section id="weirdness" class="weirdness-container">
+            <header>
+                <h2>Weirdness</h2>
+                <p>Portland is known for its quirky and eccentric culture.</p>
+            </header>
+
+            <div class="weirdness-content">
+                <p>In 2014 an Austin blog put together an infographic that compared Austin and Portland in a series of categories to try to decide which city was "weirder." Twelve different categories were used, including "Most Tattooed US Cities" and "America's Craziest Cities". From this comparison, Portland was the clear winner taking first in nine of the twelve categories.</p>
+                <p>The Oregonian newspaper developed a weirdness scale in response to the slogan and Portland ranked 11th, with high rates of hiking, hunting, and hybrid car ownership. The most "normal" cities in the U.S. were in the Midwest, and Salt Lake City and San Francisco were among the weirdest. In comparing Portland to New York City and San Francisco, Lonely Planet writer Becky Ohlsen said "Something about how cheap and isolated Portland is, allows oddballs to explore odd behavior without being squished by economics or the harsh judgment of fashion people."</p>
+                <p>Items mentioned as illustrating the residents' eccentricities include the Voodoo Doughnut shop, the World Naked Bike Ride, the Zoobomb cycling events, artist Adam Kuby's (now removed) Portland Acupuncture Project, the popularity of yarn bombing, the Portland Urban Iditarod, and the now-defunct Velveteria Museum of Velvet Paintings and 24 Hour Church of Elvis. Another is the "Horse Project." The first "Keep Portland Weird festival" was held in October 2007 at the Central Library, and among the participants were the Portland Ukulele Association, Free Geek, and the Portland Area Robotics Society. Another took place in November 2009.</p>
+                <p>Portland's city commission government—a type of municipal governance now rare in the U.S.—has been described as another aspect of its weirdness, compounded by the various peculiarities of its implementation.</p>
+                <p>Portland is the largest city in the U.S. which does not fluoridate its water. Residents have declined attempts to institute municipal fluoridation four times: First in 1956, then in 1962, 1980, and 2013. At the September 2012 Portland City Council meeting after a year of pro-fluoridation lobbying efforts, the council unanimously approved implementation despite strong opposition by attendees. The matter was quickly deferred to the next election where fluoridation lost by 40% supporting to 60% opposing largely on concerns of adding fluoridation chemicals to one of the nation's purest water supplies.</p>
+            </div>
+
+            <div id="gallery" class="gallery">
+                <div class="gallery-item">
+                    <img src="images/weirdness-01.jpg" alt="Weirdness Image 1" class="gallery-img">
+                    <span class="gallery-img-name">The Peculiarium</span>
+                </div>
+                <div class="gallery-item">
+                    <img src="images/weirdness-02.jpg" alt="Weirdness Image 2" class="gallery-img">
+                    <span class="gallery-img-name">24 Hour Church of Elvis</span>
+                </div>
+                <div class="gallery-item">
+                    <img src="images/weirdness-03.jpg" alt="Weirdness Image 3" class="gallery-img">
+                    <span class="gallery-img-name">The TARDIS Room</span>
+                </div>
+                <div class="gallery-item">
+                    <img src="images/weirdness-04.jpg" alt="Weirdness Image 4" class="gallery-img">
+                    <span class="gallery-img-name">Contestants in the Portland Urban Iditarod</span>
+                </div>
+                <div class="gallery-item">
+                    <img src="images/weirdness-05.jpeg" alt="Weirdness Image 5" class="gallery-img">
+                    <span class="gallery-img-name">The UniPiper</span>
+                </div>
+                <div class="gallery-item">
+                    <img src="images/weirdness-06.png" alt="Weirdness Image 6" class="gallery-img">
+                    <span class="gallery-img-name">Mural in Portland, Oregon</span>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025</p>
+    </footer>
+
+    <!-- Overlay -->
+    <div id="overlay" class="overlay">
+        <span id="close" class="close"><i class="bi bi-x"></i></span>
+        <div class="overlay-content">
+          <img id="overlay-img" src="https://placehold.co/400" alt="Overlay View">
+          <p id="overlay-caption"></p>
+        </div>
+        <button id="prev" class="prev"><i class="bi bi-chevron-left"></i></button>
+        <button id="next" class="next"><i class="bi bi-chevron-right"></i></button>
+      </div>
+
+    <!-- scripts -->
+    <script src="script.js"></script>
+</body>
+</html>
