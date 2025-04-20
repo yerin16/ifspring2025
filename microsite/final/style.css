@@ -363,8 +363,9 @@ main {
   transform: translateX(-50%);
   background-color: var(--primary-color);
   width: 7px;
-  height: 100%;
+  height: 0;
   z-index: 0;
+  animation: extendBar 1.5s ease-out forwards;
 }
 
 .timeline {
@@ -374,6 +375,17 @@ main {
   gap: 50px;
   position: relative;
   z-index: 1;
+  opacity: 0;
+  transform: translateX(-50px);
+  animation: fadeIn 1s ease-out forwards;
+}
+
+.timeline:nth-child(odd) {
+  animation-delay: 0.3s;
+}
+
+.timeline:nth-child(even) {
+  animation-delay: 0.6s;
 }
 
 .timeline-circle {
@@ -385,6 +397,16 @@ main {
   overflow: hidden;
   border: 5px solid var(--primary-color);
   position: relative;
+  transform: scale(0.8);
+  animation: popIn 1s ease-out forwards;
+}
+
+.timeline:nth-child(odd) .timeline-circle {
+  animation-delay: 0.3s;
+}
+
+.timeline:nth-child(even) .timeline-circle {
+  animation-delay: 0.6s;
 }
 
 .timeline-circle img {
@@ -399,6 +421,16 @@ main {
   flex-direction: column;
   justify-content: center;
   gap: 15px;
+  transform: rotate(-5deg);
+  animation: rotateIn 1s ease-out forwards;
+}
+
+.timeline:nth-child(odd) .timeline-content {
+  animation-delay: 0.3s;
+}
+
+.timeline:nth-child(even) .timeline-content {
+  animation-delay: 0.6s;
 }
 
 .timeline-content h3 {
@@ -441,6 +473,32 @@ main {
   gap: 15px;
 }
 
+.weirdness-content p {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeIn 1s ease-out forwards;
+}
+
+.weirdness-content p:nth-child(1) {
+  animation-delay: 0.2s;
+}
+
+.weirdness-content p:nth-child(2) {
+  animation-delay: 0.4s;
+}
+
+.weirdness-content p:nth-child(3) {
+  animation-delay: 0.6s;
+}
+
+.weirdness-content p:nth-child(4) {
+  animation-delay: 0.8s;
+}
+
+.weirdness-content p:nth-child(5) {
+  animation-delay: 1s;
+}
+
 .gallery {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -451,6 +509,9 @@ main {
   position: relative;
   overflow: hidden;
   cursor: pointer;
+  opacity: 0;
+  transform: scale(0.8);
+  animation: fadeIn 1s ease-out forwards;
 }
 
 .gallery-item img {
@@ -542,6 +603,17 @@ main {
   align-items: center;
   justify-content: center;
   gap: 30px;
+  opacity: 0;
+  transform: translateX(-50px);
+  animation: fadeIn 1s ease-out forwards;
+}
+
+.controversy-item:nth-child(1) {
+  animation-delay: 0.3s;
+}
+
+.controversy-item:nth-child(2) {
+  animation-delay: 0.6s;
 }
 
 .controversy-icon {
@@ -553,6 +625,16 @@ main {
   justify-content: center;
   font-size: 3rem;
   border-radius: 50%;
+  transform: scale(0.8);
+  animation: popIn 1s ease-out forwards;
+}
+
+.controversy-item:nth-child(1) .controversy-icon {
+  animation-delay: 0.3s;
+}
+
+.controversy-item:nth-child(2) .controversy-icon {
+  animation-delay: 0.6s;
 }
 
 .controversy-text {
@@ -560,6 +642,16 @@ main {
   flex-direction: column;
   text-align: center;
   gap: 20px;
+  transform: rotate(-5deg);
+  animation: fadeIn 1s ease-out forwards;
+}
+
+.controversy-item:nth-child(1) .controversy-text {
+  animation-delay: 0.3s;
+}
+
+.controversy-item:nth-child(2) .controversy-text {
+  animation-delay: 0.6s;
 }
 
 .controversy-text h3 {
@@ -604,10 +696,31 @@ main {
   display: flex;
   flex-direction: column;
   gap: 15px;
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeIn 1s ease-out forwards;
+}
+
+.sources-content div:nth-child(1) {
+  animation-delay: 0.3s;
+}
+
+.sources-content div:nth-child(2) {
+  animation-delay: 0.6s;
 }
 
 .sources-content h3 {
   font-size: 1.5rem;
+  transform: rotate(-5deg);
+  animation: popIn 1s ease-out forwards;
+}
+
+.sources-content div:nth-child(1) h3 {
+  animation-delay: 0.3s;
+}
+
+.sources-content div:nth-child(2) h3 {
+  animation-delay: 0.6s;
 }
 
 .sources-content a {
@@ -791,6 +904,49 @@ button {
   100% {
     opacity: 1;
     transform: translateY(0);
+  }
+}
+
+@keyframes extendBar {
+  0% {
+    height: 0;
+  }
+  100% {
+    height: 100%;
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateX(-50px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes popIn {
+  0% {
+    transform: scale(0.8);
+  }
+  50% {
+    transform: scale(1.2);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes rotateIn {
+  0% {
+    opacity: 0;
+    transform: rotate(-15deg);
+  }
+  100% {
+    opacity: 1;
+    transform: rotate(0deg);
   }
 }
 
