@@ -258,6 +258,7 @@ main {
   transform: translate(-50%, -50%);
   opacity: 0;
   transition: opacity 0.3s ease, transform 0.3s ease;
+  text-align: center;
 }
 
 .category-image:hover .img-description {
