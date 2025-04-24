@@ -1,0 +1,138 @@
+/* general */
+body,
+h1,
+h2,
+p {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  background-color: var(--light-color);
+}
+
+/* variables */
+:root {
+  --primary-color: #1b263b;
+  --secondary-color: #415a77;
+  --tertiary-color: #778da9;
+  --dark-color: #0d1b2a;
+  --light-color: #e0e1dd;
+}
+
+/* header */
+header {
+  text-align: center;
+  padding: 20px 0;
+}
+
+header h1 {
+  font-size: 2rem;
+  color: var(--primary-color);
+}
+
+header p {
+  font-size: 1.1rem;
+  color: var(--secondary-color);
+  font-style: italic;
+}
+
+/* main */
+main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px 30px 30px 30px;
+}
+
+/* section */
+section {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  grid-auto-rows: minmax(0, auto);
+}
+
+section a {
+  text-decoration: none;
+  color: inherit;
+  display: flex;
+  flex-direction: column;
+}
+
+section div {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background-color: var(--tertiary-color);
+  border-radius: 8px;
+  padding: 20px;
+  text-align: center;
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.3);
+  height: 100%;
+  max-width: 300px;
+  gap: 10px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+section div:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
+}
+
+section div img {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  border-radius: 4px;
+}
+
+section div h2 {
+  font-size: 1.2rem;
+  color: white;
+}
+
+section div p {
+  font-size: 0.9rem;
+  color: white;
+}
+
+/* footer */
+footer {
+  text-align: center;
+  padding: 20px 0;
+  font-size: 1rem;
+  color: var(--dark-color);
+}
+
+footer a {
+  text-decoration: none;
+  margin: 0 10px;
+  transition: color 0.3s ease;
+  align-items: center;
+}
+
+footer a i {
+  margin-right: 5px;
+}
+
+.linkedin {
+  color: #0077b5;
+}
+
+.github {
+  color: #6e5494;
+}
+
+footer a:hover {
+  color: var(--dark-color);
+}
+
+/* media queries */
+@media (max-width: 767px) {
+  section {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
